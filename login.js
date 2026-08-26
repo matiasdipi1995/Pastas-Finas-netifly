@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
 
     const logueado = localStorage.getItem("logueado");
-
+    
     const usuarioBtn = document.getElementById("usuarioBtn");
     const menuUsuario = document.getElementById("menuUsuario");
     const nombreUsuario = document.getElementById("nombreUsuario");
