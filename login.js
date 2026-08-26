@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
         cerrarSesion.addEventListener("click", function(e){
             e.preventDefault();
             localStorage.removeItem("logueado");
-            window.location.href = "i.html";
+            window.location.href = "index.html";
         });
 
     }else{

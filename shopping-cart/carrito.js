@@ -5,7 +5,7 @@
 // --------------------------------------------------------------------------
 // 1. MAPEADO DE ELEMENTOS DEL DOM (NODOS)
 // --------------------------------------------------------------------------
-// Selectores compartidos entre la interfaz principal (i.html) y ventas.html
+// Selectores compartidos entre la interfaz principal (index.html) y ventas.html
 const botonesAgregar = document.querySelectorAll(".añadir-tarjeta");
 const cartBtn = document.querySelector(".cart-btn");
 const cartDropdown = document.getElementById("cart-dropdown");
@@ -96,7 +96,7 @@ function actualizarCarrito() {
         if (cartContent) {
             cartContent.innerHTML = `
                 <p class="empty-cart">Tu carrito está vacío</p>
-                <a href="i.html#productos" class="go-shopping">Ir a comprar</a>
+                <a href="index.html#productos" class="go-shopping">Ir a comprar</a>
             `;
         }
 
@@ -116,7 +116,7 @@ function actualizarCarrito() {
     carrito.forEach((producto, index) => {
         total += producto.precio;
 
-        // Renderizado para el desplegable flotante (i.html)
+        // Renderizado para el desplegable flotante (index.html)
         // Agregamos un botón de borrado individual pasándole su índice (index)
         if (cartContent) {
             cartContent.innerHTML += `
@@ -152,7 +152,7 @@ function actualizarCarrito() {
 // 5. FUNCIÓN CRUCIAL: ELIMINAR UN ITEM ESPECÍFICO DEL CARRITO
 // --------------------------------------------------------------------------
 // Exponemos la función de manera global (window.) para que los botones dinámicos 
-// con el atributo "onclick" puedan llamarla desde cualquier vista (i.html o ventas.html)
+// con el atributo "onclick" puedan llamarla desde cualquier vista (index.html o ventas.html)
 window.eliminarItemCarrito = function(index) {
     // Removemos exactamente 1 elemento ubicado en la posición 'index'
     carrito.splice(index, 1);
@@ -215,7 +215,7 @@ if (formularioCompra) {
         window.open(urlWhatsApp, "_blank");
 
         // Redirección de retorno limpio a la página de inicio
-        window.location.href = "i.html";
+        window.location.href = "index.html";
     });
 }
 
